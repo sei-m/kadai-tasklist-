@@ -1,11 +1,15 @@
+<div class="my-4">
+  <%= link_to '新規タスクの投稿', new_task_path %>
+</div>
+
 <div class="row">
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
+        <h3 class="card-title">ユーザーネーム</h3>
       </div>
       <div class="card-body">
-        <img class="rounded img-fluid" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
+        <h3 class="card-title"><%= @user.name %></h3>
       </div>
     </div>
   </aside>
@@ -13,7 +17,6 @@
     <ul class="nav nav-tabs nav-justified mb-3">
       <li class="nav-item"><a href="/" class="nav-link">Tasklists</a></li>
     </ul>
+    <%= render 'tasks/tasks', tasks: @tasks %>
   </div>
 </div>
-
-<%= link_to '新規タスクの投稿', new_task_path %>

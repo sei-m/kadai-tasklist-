@@ -1,5 +1,7 @@
+<div class="my-4">
+  <%= link_to '新規タスクの投稿', new_task_path %>
+</div>
+
 <div class="center col-sm-9">
   <%= render 'tasks/tasks', tasks: @tasks %>
 </div>
-
-<%= link_to '新規タスクの投稿', new_task_path %>
