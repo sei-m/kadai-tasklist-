@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   put 'tasks/:id', to: 'tasks#update'
   get 'tasks/:id/edit', to: 'tasks#edit'
 
-  get 'users/index'
-  get 'users/show'
   get 'users/new'
   get 'users/create'
   
@@ -17,5 +15,5 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :tasks, only: [:index, :show, :new, :edit, :create, :destroy]
-  resources :users, only: [:show, :new, :create]
+  resources :users, only: [:new, :create]
 end
