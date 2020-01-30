@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
   root to: 'tasks#index'
+  
+  patch 'tasks/:id', to: 'tasks#update'
+  put 'tasks/:id', to: 'tasks#update'
+  get 'tasks/:id/edit', to: 'tasks#edit'
 
   get 'users/index'
   get 'users/show'
